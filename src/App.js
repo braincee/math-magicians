@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import { PureComponent } from 'react';
 import Calculator from './components/Calculator';
 
 class App extends PureComponent {
