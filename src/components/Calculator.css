@@ -29,8 +29,14 @@ body {
   background-color: rgba(255, 166, 0, 0.863);
 }
 
+.sign:hover,
+.assign:hover {
+  background-color: rgba(255, 166, 0, 0.438);
+}
+
 .zero {
   grid-column: 1 / span 2;
+  cursor: pointer !important;
 }
 
 button {
