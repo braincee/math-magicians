@@ -1,15 +1,23 @@
-import { Component } from 'react';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Calculator from './components/Calculator';
+import Home from './route-pages/Home';
+import Quotes from './route-pages/Quotes';
+import NotMatch from './route-pages/NotMatch';
+import Navbar from './route-pages/Navbar';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class App extends Component {
-  render() {
-    return (
-      <>
-        <Calculator />
-      </>
-    );
-  }
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route element={<Home />} path="/" exact />
+        <Route element={<Calculator />} path="/calculator" exact />
+        <Route element={<Quotes />} path="/quotes" exact />
+        <Route element={<NotMatch />} path="*" exact />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
