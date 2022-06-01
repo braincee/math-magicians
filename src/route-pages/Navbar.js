@@ -29,9 +29,9 @@ function Navbar() {
           {
                         paths.map((path) => (
                           <li key={path.id}>
-                                <NavLink to={ path.path } className={ ( link ) => ( link.isActive ? 'active' : '' ) }>
-                                    { path.text }
-                                </NavLink>
+                            <NavLink to={path.path} className={(link) => (link.isActive ? 'active' : '')}>
+                              { path.text }
+                            </NavLink>
                           </li>
                         ))
                     }

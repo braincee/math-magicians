@@ -11,8 +11,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route element={<Home />} path="/" exact="true" />
-        <Route element={<Calculator />} path="/calculator" exact="true" />
+        <Route element={<Home />} path="/" exact />
+        <Route element={<Calculator />} path="/calculator" exact />
         <Route element={<Quotes />} path="/quotes" exact />
         <Route element={<NotMatch />} path="*" exact />
       </Routes>
