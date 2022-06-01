@@ -41,3 +41,44 @@ describe( 'All components', () =>
   } );
 
 } );
+
+describe( 'Conduct simple calculations', () =>
+{
+  const number1 = 9
+  const number2 = 3
+
+  it( 'Click number to display', () =>
+  {
+    render( <Calculator /> );
+    const number = screen.getByTestId( 'cal-answer' );
+    userEvent.click( screen.getByText( '2' ) );
+    expect( number.innerHTML ).toMatch( '2' );
+   
+  } );
+ 
+  const addition = operate( number1, number2, '+' );
+  it( 'should perform an addition', () =>
+  {
+    expect( addition ).toBe( '12' );
+  } );
+
+  const subtraction = operate( number2, number1, '-' );
+  it( 'should perform a subtraction', () =>
+  {
+    expect( subtraction ).toBe( '-6' );
+  } );
+
+  const multiplication = operate( number1, number2, 'x' );
+  it( 'should perform a multiplication', () =>
+  {
+    expect( multiplication ).toBe( '27' );
+  } );
+ 
+
+  const division = operate( number1, number2, '÷' );
+  it( 'should perform a division', () =>
+  {
+    expect( division ).toBe( '3' );
+  })
+
+} );
