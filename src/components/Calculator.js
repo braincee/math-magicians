@@ -18,7 +18,7 @@ const Calculator = () => {
       <h2>LET&#39;S DO SOME MATHS!</h2>
       <div className="calculator">
         <div className="cal-answer">
-          {answer.next || answer.operation || answer.total || 0}
+          {next ? (<div className="answer">{next}</div>) : (<div className="answer">{total}</div>)}
         </div>
         <button type="button" value="AC" onClick={clickEvent}>AC</button>
         <button type="button" value="+/-" onClick={clickEvent}>+/-</button>
