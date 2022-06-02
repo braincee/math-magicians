@@ -66,77 +66,70 @@ describe('Conduct simple operations', () => {
     expect(division).toBe('3');
   });
 
-  const cantDivide = operate( number2, 0, '÷' );
-  it( 'should check for no divisible by 0', () =>
-  {
-    expect( cantDivide ).toBe( "Can't divide by 0." );
-  } );
+  const cantDivide = operate(number2, 0, '÷');
+  it('should check for no divisible by 0', () => {
+    expect(cantDivide).toBe("Can't divide by 0.");
+  });
 
-  const modulusOperator = operate( number1, number2, '%' );
-  it( 'should check for modulus of a number', () =>
-  {
-    expect( modulusOperator ).toBe( '0' );
-  } );
-} );
+  const modulusOperator = operate(number1, number2, '%');
+  it('should check for modulus of a number', () => {
+    expect(modulusOperator).toBe('0');
+  });
+});
 
-describe( 'Testing for calculate functions', () =>
-{
-
-   it( 'should clear and reset all functions', () =>
-  {
+describe('Testing for calculate functions', () => {
+  it('should clear and reset all functions', () => {
     const object = {
       total: '3',
       next: '9',
       operation: 'x',
-    }
+    };
 
     const answer = {
       total: null,
       next: null,
       operation: null,
-    }
+    };
 
-    const total = calculate( object, 'AC' );
-    expect( total ).toEqual( answer );
-   } );
-  
-  it( 'should perform modulo operation', () =>
-  {
+    const total = calculate(object, 'AC');
+    expect(total).toEqual(answer);
+  });
+
+  it('should perform modulo operation', () => {
     const object = {
       total: '4',
       next: '2',
       operation: '%',
-    }
+    };
 
     const answer = {
       total: '0',
       next: null,
       operation: '%',
-    }
+    };
 
-    const total = calculate( object, '%' );
-    expect( total ).toEqual( answer );
-  } );
+    const total = calculate(object, '%');
+    expect(total).toEqual(answer);
+  });
 
-   it( 'should toggle between plus and minus', () =>
-  {
+  it('should toggle between plus and minus', () => {
     const object = {
       total: '1',
       next: '2',
       operation: 'x',
-    }
-    
+    };
+
     const answer = {
       total: '1',
       next: '-2',
       operation: 'x',
-    }
+    };
 
-    const total = calculate( object, '+/-' );
-    expect( total ).toEqual( answer );
-  } );
-   
-    it('should perform addition', () => {
+    const total = calculate(object, '+/-');
+    expect(total).toEqual(answer);
+  });
+
+  it('should perform addition', () => {
     const object = {
       total: '7',
       next: '2',
@@ -151,60 +144,56 @@ describe( 'Testing for calculate functions', () =>
 
     const total = calculate(object, '+');
     expect(total).toEqual(answer);
-    } );
-  
-  it( 'should perform subtraction', () =>
-  {
+  });
+
+  it('should perform subtraction', () => {
     const object = {
       total: '3',
       next: '1',
       operation: '-',
-    }
+    };
 
     const answer = {
       total: '2',
       next: null,
       operation: '-',
-    }
+    };
 
-    const total = calculate( object, '-' );
-    expect( total ).toEqual( answer );
-  } );
-  
-  it( 'should perform division', () =>
-  {
+    const total = calculate(object, '-');
+    expect(total).toEqual(answer);
+  });
+
+  it('should perform division', () => {
     const object = {
       total: '6',
       next: '2',
       operation: '÷',
-    }
+    };
 
     const answer = {
       total: '3',
       next: null,
       operation: '÷',
-    }
+    };
 
-    const total = calculate( object, '÷' );
-    expect( total ).toEqual( answer );
-  } );
+    const total = calculate(object, '÷');
+    expect(total).toEqual(answer);
+  });
 
-  it( 'should perform multiplication', () =>
-  {
+  it('should perform multiplication', () => {
     const object = {
       total: '5',
       next: '7',
       operation: 'x',
-    }
-    
+    };
+
     const answer = {
       total: '35',
       next: null,
       operation: 'x',
-    }
+    };
 
-    const total = calculate( object, 'x' );
-    expect( total ).toEqual( answer );
-  } );
+    const total = calculate(object, 'x');
+    expect(total).toEqual(answer);
+  });
 });
-
