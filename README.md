@@ -32,9 +32,10 @@ Run the following:
   npm run test
   ```
 
-##Deployment Versions
-[Math Magicians Heroku]()
-[Math Magicians Netlify](https://math-magicians-braincee.netlify.app/)
+## Deployment Versions
+   [Math Magicians Heroku]()
+
+   [Math Magicians Netlify](https://math-magicians-braincee.netlify.app/)
 
 
 ## Author
