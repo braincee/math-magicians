@@ -3,7 +3,7 @@ import './Calculator.css';
 import calculate from '../logic/calculate';
 
 const Calculator = () => {
-  const [answer, setAnswer] = useState({ total: 0, next: null, operation: null });
+  const [answer, setAnswer] = useState({ total: null, next: null, operation: null });
 
   const clickEvent = (event) => {
     if (!event.target.value) return;
@@ -14,7 +14,7 @@ const Calculator = () => {
   const { total, next } = answer;
 
   return (
-    <div className="aside">
+    <div className="aside" data-testid="cal-answer">
       <h2>LET&#39;S DO SOME MATHS!</h2>
       <div className="calculator">
         <div className="cal-answer">
@@ -38,7 +38,7 @@ const Calculator = () => {
         <button className="sign" type="button" value="+" onClick={clickEvent}>+</button>
         <button className="number zero" type="button" value="0" onClick={clickEvent}>0</button>
         <button type="button" value="." onClick={clickEvent}>.</button>
-        <button className="assign" type="button" value="=" onClick={clickEvent}>=</button>
+        <button className="assign" type="button" value="=" onClick={clickEvent} data-testid="answer">=</button>
       </div>
     </div>
   );
