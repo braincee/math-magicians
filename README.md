@@ -33,7 +33,7 @@ Run the following:
   ```
 
 ## Deployment Versions
-   [Math Magicians Heroku]()
+   [Math Magicians Heroku](https://maths-magicians-braincee.herokuapp.com/)
 
    [Math Magicians Netlify](https://math-magicians-braincee.netlify.app/)
 
